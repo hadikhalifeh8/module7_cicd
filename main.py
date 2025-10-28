@@ -24,6 +24,9 @@ def root():
     return {"message": "good to go to the doctor"}
 
 
+print("hello world")
+
+
 @app.post("/name")
 def get_name(name: str):
         if not name.isalpha():
