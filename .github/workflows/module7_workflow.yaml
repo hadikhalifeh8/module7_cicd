@@ -39,3 +39,4 @@ jobs:
     - name: Run application
       run: |
         uvicorn main:app --host 0.0.0.0
+        # or any other command to start your application
