@@ -24,7 +24,7 @@ def root():
     return {"message": "good to go to the doctor"}
 
 
-print("hello world")
+print("hello worlds")
 
 
 @app.post("/name")
