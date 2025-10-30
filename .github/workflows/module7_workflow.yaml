@@ -41,4 +41,27 @@ jobs:
       - name: Run application
         run: |
           uvicorn main:app --host 0.0.0.0
-          
+
+  
+
+  # docker-build:
+  #   run-on: ubuntu-latest
+  #   needs: web
+  #   steps:
+  #     - name: Checkout code
+  #       uses: actions/checkout@v5
+
+  #     - name: Build Docker image
+  #       run: |
+  #         docker build -t myapp:latest .
+
+  #     - name: push Docker image
+  #       run: |
+  #         echo "${{ secrets.DOCKER_PASSWORD }}" | docker login -u "${{ secrets.DOCKER_USERNAME }}" --password-stdin
+  #         docker tag myapp:latest myrepo/myapp:latest
+  #         docker push ${{ secrets.DOCKER_USERNAME }}/myapp:latest
+
+
+
+
+
