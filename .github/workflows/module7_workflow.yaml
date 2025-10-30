@@ -62,6 +62,8 @@ jobs:
           docker build -t myapp:latest .
 
       - name: push Docker image
+        run: |
+          echo "DOCKER_USERNAME=${DOCKER_USERNAME}"
         env:
           DOCKER_USERNAME: ${{ secrets.DOCKER_USERNAME }}
           DOCKER_PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
