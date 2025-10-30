@@ -40,7 +40,7 @@ jobs:
 
       - name: Run application
         run: |
-          uvicorn main:app --host 0.0.0.0
+          pytest tests/
 
   
 
