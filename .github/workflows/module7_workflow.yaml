@@ -22,7 +22,6 @@ jobs:
           --health-retries=5
 
     env:
-      # DATABASE_URL: postgresql://myuser:mypassword@localhost:5432/new_db
       DATABASE_URL: postgresql://course_role:mypassword@localhost:5432/myappdb
 
     steps:
