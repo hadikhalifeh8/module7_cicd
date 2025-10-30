@@ -42,6 +42,7 @@ jobs:
       - name: Run application
         run: |
           pytest tests/
+          
 
   
 
