@@ -22,6 +22,7 @@ jobs:
           --health-retries=5
 
     env:
+      # DATABASE_URL: postgresql://myuser:mypassword@localhost:5432/new_db
       DATABASE_URL: postgresql://course_role:mypassword@localhost:5432/myappdb
 
     steps:
@@ -37,6 +38,7 @@ jobs:
         run: |
           python -m pip install --upgrade pip
           pip install -r requirements.txt
+          pip install alembic
 
       - name: Run migrations
         run: alembic upgrade head
