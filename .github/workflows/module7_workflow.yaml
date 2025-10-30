@@ -10,19 +10,20 @@ jobs:
       db:
         image: postgres:latest
         env:
-          POSTGRES_USER: myuser
+          POSTGRES_USER: course_role
           POSTGRES_PASSWORD: mypassword
-          POSTGRES_DB: new_db
+          POSTGRES_DB: myappdb
         ports:
           - 5432:5432
         options: >-
-          --health-cmd="pg_isready -U myuser"
+          --health-cmd="pg_isready -U course_role"
           --health-interval=10s
           --health-timeout=5s
           --health-retries=5
 
     env:
-      DATABASE_URL: postgresql://myuser:mypassword@localhost:5432/new_db
+      # DATABASE_URL: postgresql://myuser:mypassword@localhost:5432/new_db
+      DATABASE_URL: postgresql://course_role:mypassword@localhost:5432/myappdb
 
     steps:
       - name: Checkout code
